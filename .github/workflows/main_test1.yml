@@ -18,7 +18,7 @@ jobs:
         # If you have other dependencies, install them here
     - name: Run tests and save results
       run: |
-        python -m unittest discover -s . -p "test_*.py" > test_results.txt 2>&1
+        python -m unittest discover -s . -p "test_*.py" -v> test_results.txt 2>&1
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with:
